@@ -22,5 +22,11 @@ generateBtn.addEventListener("click", writePassword);
 // numerals? T or F
 // special char? T or F
 // when criteria confirmed display random examples from corresponding array
-// use math floo and math random to generate password from corresponding arrays
+// use math floor and math random to generate password from corresponding arrays
 // display generated password in alert window or append to page
+
+// make variable of password 8-128 char long
+// make array of lowercase letters
+// make array of uppercase letters
+// make array of numbers
+// make array of special characters
