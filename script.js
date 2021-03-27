@@ -6,35 +6,42 @@ generateBtn.addEventListener("click", writePassword);
 
 
 // Write password to the #password input
-function writePassword() {  
+function writePassword() {
 
-//   var password = generatePassword();
+  //   var password = generatePassword();
 
-//  var passwordText = document.querySelector("#password");
+  //  var passwordText = document.querySelector("#password");
 
-//  passwordText.value = password;
+  //  passwordText.value = password;
 
 
-inputCharLength ();
+  inputCharLength();
 }
 
 function inputCharLength() {
   var length = prompt("How many characters would you like your password to contain?");
-  if (length  != null) {
-      var isnotnumber = isNaN (length);
-      
-      if (isnotnumber == false) {
-        if (length <= 7) {
-          alert("Password can be no less than 8 characters");
-        }
-        if (length >= 129) {
-          alert("password can be no more than 128 characters");
-        }
-      }
+  if (length != null) {
+    var isnotnumber = isNaN(length);
 
-  
+    if ((length > 7) && (length < 129)) {
+      var lowercase = confirm ("would you like to use lowercase characters in your password?");
+      var uppercase = confirm ("would you like to use uppercase characters in your password");
+      var numbers = confirm ("would you like to include numbers in your password?");
+      var special = confirm ("would you like to include special characters in your password?");
+      
+    }
+    else {
+      alert("password must be between 8 and 128 charters long");
+    }
   }
 }
+
+
+
+
+
+
+
 
 
 // Add event listener to generate button
@@ -58,7 +65,7 @@ function inputCharLength() {
 // make array of lowercase letters
 var lowercase = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"]
 // make array of uppercase letters
-var uppercase = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D" ,"F" ,"G" ,"H" ,"J", "K", "L", "Z", "X", "C", "V", "B", "N", "M"]
+var uppercase = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M"]
 // make array of numbers
 var nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 // make array of special characters
