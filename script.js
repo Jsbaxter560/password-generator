@@ -14,15 +14,25 @@ function writePassword() {
 
 //  passwordText.value = password;
 
-console.log ("in writes password");
+
 inputCharLength ();
 }
 
 function inputCharLength() {
   var length = prompt("How many characters would you like your password to contain?");
   if (length  != null) {
-    document.getElementById("demo").innerHTML =
-    "Hello " + person + "! How are you today?";
+      var isnotnumber = isNaN (length);
+      
+      if (isnotnumber == false) {
+        if (length <= 7) {
+          alert("Password can be no less than 8 characters");
+        }
+        if (length >= 129) {
+          alert("password can be no more than 128 characters");
+        }
+      }
+
+  
   }
 }
 
