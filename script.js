@@ -27,8 +27,9 @@ function inputCharLength() {
       var lowercase = confirm ("would you like to use lowercase characters in your password?");
       var uppercase = confirm ("would you like to use uppercase characters in your password");
       var numbers = confirm ("would you like to include numbers in your password?");
-      var special = confirm ("would you like to include special characters in your password?");
-      
+      var special = confirm ("would you like to include special characters in your password?");  
+
+      generatePassword(lowercase, uppercase, numbers, special);
     }
     else {
       alert("password must be between 8 and 128 charters long");
@@ -36,6 +37,12 @@ function inputCharLength() {
   }
 }
 
+function generatePassword(lowercase, uppercase, numbers, special) {
+  console.log(lowercase);
+  console.log(uppercase);
+  console.log(numbers);
+  console.log(special);
+}
 
 
 
